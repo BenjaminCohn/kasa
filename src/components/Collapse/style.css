@@ -1,0 +1,151 @@
+.accordions {
+    margin: 0 auto;
+    max-width: 1120px;
+    margin-bottom: 60px;
+}
+
+.accordionTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FF6060;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    height: 15px;
+}
+
+.accordionTitle:hover,.active .accordionTitle {
+    cursor: pointer;
+}
+
+.accordionContent {
+    visibility: hidden;
+    height: auto;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: all .15s ease-in;
+}
+
+.active .accordionContent {
+    display: flex;
+    align-items: center;
+    visibility: visible;
+    overflow: visible;
+    padding: 1rem;
+    transition: 0.3s;
+    opacity: 1;
+    border-radius: 5px;
+    background: #f7f7f7;
+    font-size:18px;
+    color: #FF6060;
+    margin-bottom: 20px;
+}
+
+.active {
+}
+
+.false {
+    height: 80px;
+}
+
+.active i {
+    transition: 0.5s;
+}
+
+.false i {
+    transform:rotate(180deg);
+    transition: 0.3s;
+}
+
+/* RESPONSIVE */
+
+
+
+@media (max-width: 799px){
+
+    .accordionTitle {
+        font-size: 13px;
+    }
+
+    .false {
+        height: 80px;
+    }
+
+    .active {
+    }
+
+    .Accordion {
+        flex-direction: column;
+    }
+
+    .Accordion .false {
+        width: 90%;
+    }
+
+    .Accordion .active {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    .active .accordionContent {
+        font-size: 12px;
+    }
+
+}
+
+.AccordionLogement {
+    display: flex;
+    justify-content: center;
+    gap:5%
+}
+
+.AccordionLogement .false {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.AccordionLogement .active {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.AccordionLogement div {
+    border-radius: 10px;
+}
+
+/* RESPONSIVE */
+
+
+
+@media (max-width: 799px){
+
+    .accordionTitle {
+        font-size: 13px;
+    }
+
+    .AccordionLogement {
+        flex-direction: column;
+    }
+
+    .AccordionLogement .false {
+        width: 100%;
+    }
+
+    .AccordionLogement .active {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .active .accordionContent {
+        font-size: 12px;
+    }
+
+}
